@@ -1,0 +1,41 @@
+{
+  "info": {
+    "name": "WhatsApp LangChain API",
+    "description": "Colección para probar la API de WhatsApp LangChain",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Webhook WhatsApp",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"sender\": \"123456789\",\n  \"agent\": \"default\",\n  \"parameters\": {\n    \"temperature\": 0.7,\n    \"additional_conditions\": \"Sé amable y claro\"\n  },\n  \"conversation_history\": [\n    {\n      \"role\": \"user\",\n      \"message\": \"¿Cuál es el horario de atención al cliente?\"\n    }\n  ]\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/webhook/whatsapp",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "webhook",
+            "whatsapp"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
